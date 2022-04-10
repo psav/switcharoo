@@ -8,6 +8,8 @@ exts = set()
 filenames = set()
 for item in files:
     filename, ext = os.path.splitext(item)
+    if "." not in ext:
+        continue
     exts.add(ext)
     filenames.add(filename)
 
